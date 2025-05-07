@@ -1,0 +1,14 @@
+// Función para calcular el factorial de un número
+const factorial = (n) => {
+    if (n === 0 || n === 1) return 1;
+    return n * factorial(n - 1);
+};
+
+// Crear un arreglo de tamaño 30
+const arreglo = new Array(30).fill(0).map((_, i) => factorial(i));
+
+// Imprimir el resultado
+console.log("Arreglo con factoriales:");
+arreglo.forEach((valor, indice) => {
+    console.log(`Índice ${indice} => Factorial ${valor}`);
+});
